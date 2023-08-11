@@ -1,0 +1,16 @@
+1. yes: restructure the server side 
+2. modify the tourism/:lat/:lon, to get data with a the radius
+3. yes:uniform data structure
+    save img data
+4. insert more test data
+
+
+login
+
+
+5. ADD fake data
+6.link view page
+7.link favourite page
+8. delet favor butn
+9.add favor btn get local starage data
+ 

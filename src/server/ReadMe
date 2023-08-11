@@ -1,0 +1,15 @@
+# Command to have your MongoDB server up and running while working on server
+#use ssh command for tunneling 
+ssh <yourUSERNAME>@<yourUSERNAME>.host.cs.st-andrews.ac.uk -L 24120:localhost:24120 -N ( 24120 -change to your port  )
+
+# Set up to run server
+-> Download express for node and mongodb for node 
+    npm install express
+    npm install mongodb
+-> You have your server data base running
+-> Navigate to server directory 
+# Command  // This will run server on port 8000 and will have the mongo db connected
+../src/server> node trip-planner-server.js 
+
+
+npm install --save video.js videojs-playlist

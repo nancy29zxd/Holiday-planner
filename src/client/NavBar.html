@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+
+        <!-- Latest compiled JavaScript -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+            <script src="">
+                var loggedIN = false;
+            
+            window.onload = openModal()
+            
+            function openModal() {
+                if(!loggedIN){
+                
+                // const modal = document.getElementById('myModal');
+                // modal.attributes. = 'block';
+            
+                const myModal = new bootstrap.Modal(document.getElementById('myModal'));
+                myModal.toggle();
+            
+              }
+            }
+            </script>
+        
+    </head>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Holiday Planner</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addactivity.html">Add Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favoriteslist.html">Favourites</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal"><span class="glyphicon
+                                glyphicon-log-in"></span> Login</a>
+                    </li>
+                   
+                      
+                      <!-- The Modal -->
+                      <div class="modal modal-fullscreen" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header ">
+                              
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                
+                                
+                                <div class="container">
+                                    
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center">
+                                            <div class="form-floating mb-3 mt-3">
+                                                <div class="form-floating mb-3 mt-3">
+                                                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                                                    <label for="name">Name</label>
+                                                  </div>
+                                            
+                                               <div class="form-floating mb-3 mt-3">
+                                                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                                                <label for="email">Email</label>
+                                              </div>
+                                              
+                                              <div class="form-floating mt-3 mb-3">
+                                                <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
+                                                <label for="password">Password</label>
+                                              </div>
+                                               
+                                               <div class="row ">
+                                    
+                                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-end">
+                                                    <button class="btn btn-primary" id="btn_log" onclick="loginUser()"  data-bs-dismiss="modal">Log In</button>
+                                                </div>
+                                                
+                                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-end">
+                                                    <button class="btn btn-warning" id="btn_register" onclick="registerUser()" data-bs-dismiss="modal">Register</button>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                               
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                
+                              <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button> -->
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+
+

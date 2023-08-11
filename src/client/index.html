@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container-fluid vh-100">
+    <div class="row h-100">
+      <div class="col-md-4 offset-md-4 my-auto">
+        <div class="card">
+          <div class="card-header text-center">
+            <h1>Login</h1>
+          </div>
+          <div class="card-body">
+            
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required="">
+                <label for="name" >Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required="">
+                <label for="email">Email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd" required="">
+                <label for="password">Password</label>
+              </div>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit" onclick="loginUser()">Log In</button>
+                <button class="btn btn-secondary" type="button" onclick="registerUser()" >Register</button>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+  <script src="index.js"></script>

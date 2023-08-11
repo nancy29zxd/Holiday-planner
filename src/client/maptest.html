@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Holiday Planner</title>
+</head>
+<style>
+    #imgDiv {
+        margin: 30px; 
+        width: 300px;
+        height: 300px;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position: center center;
+        overflow: auto;
+    }
+    #imgPreview {
+        object-fit: contain;
+        width: 300px;
+        max-width:100%;
+        max-height: 100%;
+        object-fit: cover;
+        vertical-align: top;
+    }
+    /* #latLng_div{
+        position: absolute;
+        left
+    } */
+    #activitySubmit_btn{
+        position: absolute;
+        top: 450px;
+        left:830px;
+    }
+</style>
+<body onload="openTab(event, `home-id`)">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Holiday Planner</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="tablinks" onclick="openTab(event, `home-id`)"><a>Home</a></li>
+                    <li class="tablinks" onclick="openTab(event, `addActivity-id`)"><a>Add Activities</a></li>
+                    <li><a class="tablinks" href="results.html">View Activities</a></li>
+                    <li><a class="tablinks">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button class="open-button" onclick="openForm()">Log In</button></li>
+                    <!-- Log In Form -->
+                    <div class="form-popup" id="myForm">
+                        <form action="/action_page.php" class="form-container">
+                        <h1>Login</h1>
+                    
+                        <label for="email"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Your Username" name="username" required>
+                    
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+                    
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Big div containing left and right halfs -->
+    <div id="home-id" class="tabContent" style="display: flex; flex-direction: row">
+        <!-- left-half -->
+           <div id="map" style="display: inline-block; width:40%; height:400px;"></div>
+        <!-- right-half -->
+        <div style="display: inline-block; flex-direction: column; width: 50%;">
+           <div id="searchBar" style="border: 1px solid black; margin:10px; align-items: center; justify-content: center; height: 100%;">
+                <p id="selectedLatAndLng-id"></p>
+                <input id="address" placeholder="Enter place name", style="width: 200px;">
+                <br>
+                <button id="btn_SearchBar" onclick="geoCodeLocation()">Check Activities Nearby</button>
+            </div> 
+        </div> 
+    </div>
+
+ 
+
+ <!-- cannot put server and database here, or will be cracked and not useful -->
+    <script src="client.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEBbA59zRuiyjOQWJWvshwntR-IF-liRk&libraries=places&callback=initMap">
+    </script>
+</body>
+
+</html>
